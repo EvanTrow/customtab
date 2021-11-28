@@ -3,7 +3,8 @@ DIR="$(dirname "$(readlink -f ${BASH_SOURCE[0]})")"
 tmpdir=/tmp/tmp.$(( $RANDOM * 19318203981230 + 40 ))
 plugin=$(basename ${DIR})
 archive="$(dirname $(dirname ${DIR}))/archive"
-version=$(date +"%Y.%m.%d")$1
+# version=$(date +"%Y.%m.%d")$1
+version=($(grep -oP '<!ENTITY version   "(.+?)">' "../../plugins/customtab.plg" | grep -o -P '(?<=").*(?=")'))
 
 mkdir -p $tmpdir
 
