@@ -115,7 +115,7 @@ foreach ($config as $cfg) {
       $name = "{$name}_";
     }
     $mainPage = "Menu='Tasks:$pageLocation'\nName='$name'\nType='xmenu'\nTabs='true'\nCode='$fontawesome'\n";
-    $page = "Menu='$name'\nTitle='$fullname'\n---\n<iframe src='$tabURL' style='$width' onload='this.contentWindow.focus();'></iframe>\n";
+    $page = "Menu='$name'\nTitle='$fullname'\n---\n<iframe src='$tabURL' style='$width' onload='this.contentWindow.focus();'></iframe>\n<a href='$tabURL' target='_blank'  style='float: right;'>$name <i class='fa fa-external-link'></i></a>\n";
     exec("mkdir -p /usr/local/emhttp/plugins/customtabtemp");
     file_put_contents("/usr/local/emhttp/plugins/customtabtemp/$name.page",$mainPage);
     file_put_contents("/usr/local/emhttp/plugins/customtabtemp/$name".mt_rand().".page",$page);

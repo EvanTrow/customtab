@@ -13,7 +13,7 @@ function create_tab_settings($index,$settings,$addFlag = false) {
     return;
   }
   $pageFiles = json_decode(file_get_contents("/tmp/customtab/pagefiles.json"),true);
-  $o = "<strong><font size='2'>Custom Tab Settings #$index</font></strong>&nbsp;&nbsp;<img style='cursor:pointer;' src='/plugins/customtab/images/delete.svg' width='30px' onclick='deleteTab($index);'><br>";
+  $o = "<strong><font size='2'>Custom Tab Settings #$index</font></strong>&nbsp;&nbsp;<img style='cursor:pointer;' src='/plugins/customtab/images/delete.svg' width='25px' onclick='deleteTab($index);'><br>";
   $o .= "<dd>";
   $o .= "<dt>Custom URL or Built-In Page:</dt>";
   $o .= "<dl><select id='selectPage$index' class='narrow setting' onchange='enablePage(&quot;$index&quot;)';>";
