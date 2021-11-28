@@ -13,7 +13,7 @@ function create_tab_settings($index,$settings,$addFlag = false) {
     return;
   }
   $pageFiles = json_decode(file_get_contents("/tmp/customtab/pagefiles.json"),true);
-  $o = "<strong><font size='2'>Custom Tab Settings #$index</font></strong>&nbsp;&nbsp;<img style='cursor:pointer;' src='/plugins/customtab/images/delete.png' width='30px' onclick='deleteTab($index);'><br>";
+  $o = "<strong><font size='2'>Custom Tab Settings #$index</font></strong>&nbsp;&nbsp;<img style='cursor:pointer;' src='/plugins/customtab/images/delete.svg' width='30px' onclick='deleteTab($index);'><br>";
   $o .= "<dd>";
   $o .= "<dt>Custom URL or Built-In Page:</dt>";
   $o .= "<dl><select id='selectPage$index' class='narrow setting' onchange='enablePage(&quot;$index&quot;)';>";
@@ -64,13 +64,13 @@ function create_tab_settings($index,$settings,$addFlag = false) {
     $o .= "<option value='{$page['CustomTabSource']}'><strong>{$page['Title']}</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(".str_replace("/usr/local/emhttp/plugins/","",$page['CustomTabSource']).")</option>";
   }
   $o .= "</select></dl>";  
-  $o .= "<dt>Width:</dt>";
+  $o .= "<dt>Custom CSS:</dt>";
   $o .= "<dl><input type='text' id='width$index' class='narrow setting url$index bookmark$index' $URLoptions $bookmarkoptions value='{$settings['width']}' placeholder='width: 500px;'></dl>";
   $o .= "<dt style='display: none;'>Height:</dt>";
   $o .= "<dl style='display: none;'><input type='number' id='height$index' class='narrow setting url$index bookmark$index' $URLoptions $bookmarkoptions value='{$settings['height']}' placeholder='500'></dl>";
   $o .= "<dt>Azure / Gray Icon: (See <a href='http://fontawesome.io/cheatsheet/' target='_blank'>HERE</a>)</dt>";
   $o .= "<dl><input type='text' id='fontawesome$index' class='narrow setting' value='{$settings['fontawesome']}' placeholder='f111'></dl>";
-	$o .= "<dt>Tab Position (see <a href='https://lime-technology.com/forums/topic/57109-plugin-custom-tab/'>HERE</a>)</dt>";
+	$o .= "<dt>Tab Position (see <a href='https://lime-technology.com/forums/topic/57109-plugin-custom-tab/' target='_blank'>HERE</a>)</dt>";
 	$o .= "<dl><input type='number' id='position$index' class='narrow setting' value='{$settings['position']}' placeholder='Automatic'></dl>";
   $o .= "</dd>";
   $o .= "<hr>";

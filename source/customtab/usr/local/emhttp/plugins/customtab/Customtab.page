@@ -133,6 +133,5 @@ $(function() {
 
 <input id='myapply' type="button" value="Apply" onclick='applyTab();'><input type="button" value="Done" onclick="done()">
 </form>
-<a style='float:right;' href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7M7CBCVU732XG' target='_blank'><img src='https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif'></a>
 <span id='debug'></span>
 <input type='button' value='Add Another Tab' id='newtab' onclick='addTab();'>
