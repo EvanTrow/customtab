@@ -3,7 +3,7 @@
 <!ENTITY name      "customtab">
 <!ENTITY author    "Evan Trowbridge">
 <!ENTITY version   "2021.11.28">
-<!ENTITY md5       "0603eead9a42932c6ad91cf6d49b2e99">
+<!ENTITY md5       "dc6b572d6e9c78a8f428db929a2d25c9">
 <!ENTITY launch    "Utilities/Customtab">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "EvanTrow/customtab">
