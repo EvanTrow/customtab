@@ -1,12 +1,12 @@
 <?xml version='1.0' standalone='yes'?>
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "customtab">
-<!ENTITY author    "Andrew Zawadzki">
-<!ENTITY version   "2021.03.10">
-<!ENTITY md5       "92954b3528f0a7bb2e5e6b958370af22">
+<!ENTITY author    "Evan Trowbridge">
+<!ENTITY version   "2021.11.28">
+<!ENTITY md5       "0603eead9a42932c6ad91cf6d49b2e99">
 <!ENTITY launch    "Utilities/Customtab">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
-<!ENTITY github    "Squidly271/customtab">
+<!ENTITY github    "EvanTrow/customtab">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/master/plugins/&name;.plg">
 ]>
 

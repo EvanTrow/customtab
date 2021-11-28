@@ -64,10 +64,8 @@ function create_tab_settings($index,$settings,$addFlag = false) {
     $o .= "<option value='{$page['CustomTabSource']}'><strong>{$page['Title']}</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(".str_replace("/usr/local/emhttp/plugins/","",$page['CustomTabSource']).")</option>";
   }
   $o .= "</select></dl>";  
-  $o .= "<dt>Width:</dt>";
-  $o .= "<dl><input type='number' id='width$index' class='narrow setting url$index bookmark$index' $URLoptions $bookmarkoptions value='{$settings['width']}' placeholder='1280'></dl>";
-  $o .= "<dt>Height:</dt>";
-  $o .= "<dl><input type='number' id='height$index' class='narrow setting url$index bookmark$index' $URLoptions $bookmarkoptions value='{$settings['height']}' placeholder='500'></dl>";
+  $o .= "<dt>iframe CSS:</dt>";
+  $o .= "<dl><input type='text' id='style$index' class='narrow setting url$index bookmark$index' $URLoptions $bookmarkoptions value='{$settings['style']}' placeholder='width: 100%;'></dl>";
   $o .= "<dt>Azure / Gray Icon: (See <a href='http://fontawesome.io/cheatsheet/' target='_blank'>HERE</a>)</dt>";
   $o .= "<dl><input type='text' id='fontawesome$index' class='narrow setting' value='{$settings['fontawesome']}' placeholder='f111'></dl>";
 	$o .= "<dt>Tab Position (see <a href='https://lime-technology.com/forums/topic/57109-plugin-custom-tab/'>HERE</a>)</dt>";
@@ -99,12 +97,11 @@ function tabArray($tab) {
   $set['name'] = $tab[0];
   $set['fullname'] = $tab[1];
   $set['tabURL'] = $tab[2];
-  $set['width'] = $tab[3];
-  $set['height'] = $tab[4];
-  $set['fontawesome'] = $tab[5];
-  $set['selectPage'] = $tab[6];
-  $set['page'] = $tab[7];
-	$set['position'] = $tab[8];
+  $set['style'] = $tab[3];
+  $set['fontawesome'] = $tab[4];
+  $set['selectPage'] = $tab[5];
+  $set['page'] = $tab[6];
+	$set['position'] = $tab[7];
   
   return $set;
 }
